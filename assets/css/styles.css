@@ -264,12 +264,12 @@ nav ul .nav-link a {
 
 /****************************************************** Roupa Section *******************************************************/
 
-.roupa-wrapper {
+.roupa-wrapper, .calcado-wrapper, .acessorios-wrapper, .colecao-wrapper {
 	display: flex;
 	justify-content: center;
 }
 
-.roupa-section {
+.roupa-section, .calcado-section, .acessorios-section, .colecao-section {
 	width: 100%;
 	max-width: 1440px;
 	margin: 48px 96px;
