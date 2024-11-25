@@ -1,0 +1,245 @@
+@import url(normalize.css);
+@import url(theme.css);
+
+html {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100%;
+	overscroll-behavior-y: none;scroll-behavior: smooth;
+}
+
+body, html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width: 100%;
+	position: relative;
+}
+
+/********************************************************** Wrapper ************************************************************/
+
+.content {
+	display: grid;
+	grid-template-rows: repeat(5, 100vh);
+	grid-template-areas: 
+		"roupas"
+		"calcado"
+		"acessorios"
+		"colecao-outono"
+		"footer"; 
+}
+
+/*********************************************************** Header ************************************************************/
+
+.home header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	z-index: 15;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	z-index: 15;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: var(--max-width);
+	display: flex;
+	justify-content: space-between;
+	padding: 16px var(--xxxl);
+	gap: 24px;
+	z-index: 5;
+}
+
+nav {
+	display: flex;
+	flex: 1;
+}
+
+nav ul {
+	display: flex;
+	gap: 16px;
+}
+
+.home nav ul .nav-link a {
+	color: white;
+}
+
+nav ul .nav-link a {
+	color: black;
+}
+
+#logo {
+	width: 32px;
+	height: 20px;
+}
+
+.header-actions {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	flex: 1;
+	justify-content: end;
+}
+
+.home .btn-primary {
+	color: white;
+}
+
+.btn-primary {
+	color: black;
+}
+.coracao:hover path {
+	fill: red;
+	stroke: red;
+}
+
+.compras:hover .svg-fill {
+	fill: white;
+}
+
+.home .compras:hover .svg-fill {
+	fill: white;
+}
+
+/********************************************************** Sections ***********************************************************/
+
+.section {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background-size: cover;
+	scroll-snap-align: start; /* Alinha a seção ao topo */
+	background-position: center;
+	padding: 128px 96px;
+}
+
+.section-title {
+	color: white;
+	z-index: 1000;
+}
+
+.roupa {
+	background-image: url(../imgs/roupa.jpg);
+	grid-area: roupas;
+}
+
+.calcado {
+	background-image: url(../imgs/calcado.jpg);
+	grid-area: calcado;
+}
+
+.acessorios {
+	background-image: url(../imgs/acessorios.jpg);
+	grid-area: acessorios;
+}
+
+.colecao-outono {
+	background-image: url(../imgs/colecao-outono.jpg);
+	grid-area: colecao-outono;
+}
+
+
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: hsla(0 0% 0% / 0.4); /* Sobreposição com opacidade de 20% */
+	z-index: 10;
+}
+
+/********************************************************** Footer ***********************************************************/
+
+.footer {
+	background-color: #0d0d0d;
+	grid-area: footer;
+	height: min-content;
+	scroll-snap-align: end;
+	color: white;
+	padding: 48px 96px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 96px;
+}
+
+.columns-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.footer-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.footer-head {
+	display: flex;
+	gap: 8px;
+}
+
+.footer-list-links {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 8px 20px;
+	border-left: 1px solid #222530;
+	margin-left: 12px;
+}
+
+.footer-list-link {
+	color: #d3d3d3;
+	position: relative;
+}
+
+.footer-list-link:hover {
+	color: white;
+	animation-duration: 300ms;
+}
+
+.footer-list-link:hover .footer-link-marker {
+	position: absolute;
+	height: 100%;
+	border: 0.5px solid white;
+	left: -21px;
+	border-radius: 1px;
+}
+
+.footer-logo {
+	width: 96px;
+}
+
+.legal-info-footer {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	gap: 24px;
+}
+
+.legal-rights {
+	color: white;
+	width: 100%;
+}
+
+.privacy-policy {
+	display: flex;
+	color: white;
+	width: 100%;
+	justify-content: end;
+}
+
+.legal-info:hover {
+	color: #3a3a3a;
+	animation-duration: 200ms;
+}
