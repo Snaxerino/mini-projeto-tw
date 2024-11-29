@@ -8,7 +8,6 @@ Páginas:
 - Calçado
 - Acessórios
 - Coleção Outono
-- Contacto
 
 Ideias Futuras
 - Carrinho de Compras

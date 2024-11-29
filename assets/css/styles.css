@@ -451,6 +451,21 @@ nav ul .nav-link a {
 	animation: slide 4s linear infinite;
 } */
 
+.contact-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 128px;
+}
+
+.contact-section {
+	display: flex;
+	justify-content: center;
+	margin: 0 96px;
+	width: 100%;
+	max-width: 900px;
+}
+
 @media (max-width: 768px) {
 	body {
 		min-width: 100dvw;
