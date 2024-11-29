@@ -45,14 +45,18 @@ header {
 	background-color: rgba(255, 255, 255, 0.0);
 }
 
-.wrapper {
+.wrapper-desktop {
+	display: flex;
 	width: 100%;
 	max-width: var(--max-width);
-	display: flex;
 	justify-content: space-between;
 	padding: 16px var(--xxxl);
 	gap: 24px;
 	z-index: 5;
+}
+
+.wrapper-mobile {
+	display: none;
 }
 
 nav {
@@ -67,10 +71,12 @@ nav ul {
 
 .home nav ul .nav-link a {
 	color: white;
+	white-space: nowrap;
 }
 
 nav ul .nav-link a {
 	color: black;
+	white-space: nowrap;
 }
 
 #logo {
@@ -136,6 +142,7 @@ nav ul .nav-link a {
 }
 
 .home .section-title {
+	position: relative;
 	color: white;
 	z-index: 1000;
 }
@@ -319,13 +326,12 @@ nav ul .nav-link a {
 
 .content-articles {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	margin-bottom: 48px;
 	gap: 12px;
 }
 
 .article-card {
-    width: 100%;
     display: grid;
     grid-template-rows: 65% 13% auto;
     grid-template-areas:
@@ -336,13 +342,18 @@ nav ul .nav-link a {
 }
 
 .article-img {
-    display: flex;
-    justify-content: center;
+    display: grid;
+	place-content: center;
+	width: 100%;
+	padding: 16px;
     background-color: #ececec;
-    padding: 24px;
     grid-area: img;
 	border-radius: 4px;
 	margin-bottom: 8px;
+}
+
+.article-img img {
+	width: 100%;
 }
 
 .article-header {
@@ -391,7 +402,7 @@ nav ul .nav-link a {
 }
 
 .article-text {
-	color: #5f5f5f;
+	color: #909090;
 	text-align: justify;
 }
 
@@ -403,43 +414,7 @@ nav ul .nav-link a {
 	line-height: 32px;
 }
 
-/* .article-button {
-    grid-area: button;
-	color: white;
-	background-color: black;
-	padding: 12px 16px;
-	width: min-content;
-	height: min-content;
-	white-space: nowrap;
-	border-radius: 8px;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.easter-egg {
+/* .easter-egg {
 	white-space: nowrap;
 	color: black;
 }
@@ -450,4 +425,44 @@ nav ul .nav-link a {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	animation: slide 4s linear infinite;
+} */
+
+@media (max-width: 768px) {
+	body {
+		min-width: 100dvw;
+		overflow: hidden;
+	}
+	.wrapper-desktop {
+		display: none;
+	}
+
+	.wrapper-mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		justify-content: space-between;
+		padding: 16px;
+		gap: 24px;
+		z-index: 5;
+	}
+
+	.wrapper-mobile nav {
+		display: flex;
+		justify-content: start;
+		width: 100%;
+	}
+
+	.content {
+		width: 100%;
+	}
+
+	.section {
+		min-height: 100dvh;
+		max-width: 100dvw;
+	}
+
+	.overlay {
+		min-height: 100dvh;
+	}
 }
