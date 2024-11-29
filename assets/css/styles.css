@@ -517,6 +517,12 @@ nav ul .nav-link a {
 		margin-top: 16px;
 	}
 
+	.roupa-section, .calcado-section, .acessorios-section, .colecao-section {
+		width: 100%;
+		max-width: 1440px;
+		margin: 112px 16px 0 16px;
+	}
+
 	.columns-wrapper {
 		flex-direction: column;
 	}
