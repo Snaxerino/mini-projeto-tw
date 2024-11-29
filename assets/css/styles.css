@@ -37,12 +37,13 @@ header {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	z-index: 15;
+	z-index: 100;
 	background-color: white;
 }
 
 .home header {
-	background-color: rgba(255, 255, 255, 0.0);
+	background-color: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(4px);
 }
 
 .wrapper-desktop {
@@ -144,7 +145,7 @@ nav ul .nav-link a {
 .home .section-content {
 	display: flex;
 	flex-direction: column;
-	z-index: 1000;
+	z-index: 99;
 	position: relative;
 	margin-top: 48px;
 }
@@ -340,7 +341,7 @@ nav ul .nav-link a {
 	color: #585858;
 }
 
-:where(.tshirts, .calcas, .hoodies, .calcoes) .tab, .tab:hover {
+:where(.tshirts, .calcas, .hoodies, .calcoes, .aneis, .brincos, .botas, .sapatilhas, .cascois, .gorros) .tab, .tab:hover {
 	color: black;
 	text-decoration: underline;
 	text-underline-offset: 4px;
@@ -453,7 +454,6 @@ nav ul .nav-link a {
 @media (max-width: 768px) {
 	body {
 		min-width: 100dvw;
-		overflow: hidden;
 	}
 	.wrapper-desktop {
 		display: none;
@@ -501,32 +501,23 @@ nav ul .nav-link a {
 	}
 
 
-.home .section-content {
-	display: flex;
-	flex-direction: column;
-	z-index: 1000;
-	position: relative;
-	margin-top: 160px;
-}
+	.home .section-content {
+		margin-top: 160px;
+	}
 
-.home .section-caption {
-	color: white;
-	text-transform: uppercase;
-}
+	.home .section-title {
+		font-size: 48px;
+		line-height: 56px;
+		margin-top: 36px;
+	}
 
-.home .section-title {
-	font-size: 48px;
-	line-height: 56px;
-	font-weight: 800;
-	color: white;
-	text-transform: uppercase;
-	margin-top: 36px;
-}
+	.home .section-text {
+		font-size: 24px;
+		line-height: 32px;
+		margin-top: 16px;
+	}
 
-.home .section-text {
-	color: white;
-	font-size: 24px;
-	line-height: 32px;
-	margin-top: 16px;
-}
+	.columns-wrapper {
+		flex-direction: column;
+	}
 }
